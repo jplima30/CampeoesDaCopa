@@ -33,12 +33,13 @@ class WinnersTableViewController: UITableViewController {
         return worldCups.count
     }
 
-    // É um método que é chamado sempre que o método for apresentar uma célula (quando a célula está prestes a ser visível a tabela constroi ela)/ indexpath = contem o caminho do índice da célula ou seja em qual sessão a célua se encontra e qual linha ela faz parte
+    // É um método que é chamado sempre que o método for apresentar uma célula (quando a célula está prestes a ser visível a tabela constroi ela)/ indexpath = contem o caminho do índice da célula ou seja em qual sessão a célula se encontra e qual linha ela faz parte
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
-        // Configure the cell...
-
+        let worldCup = worldCups[indexPath.row]
+        cell.textLabel?.text = "Copa \(worldCup.year) - \(worldCup.country)"
+        cell.detailTextLabel?.text = "\(worldCup.winner) vs \(worldCup.vice))"
+        cell.imageView?.image = UIImage(named: "\(worldCup.winner).png")
         return cell
     }
     
