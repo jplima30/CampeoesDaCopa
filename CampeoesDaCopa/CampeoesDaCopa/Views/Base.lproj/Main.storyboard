@@ -33,7 +33,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="144" id="Y8H-ER-v5z">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="144" id="Y8H-ER-v5z" customClass="WorldCupTableViewCell" customModule="CampeoesDaCopa" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="182.66666603088379" width="414" height="144"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y8H-ER-v5z" id="Ec3-T3-9TT">
@@ -133,6 +133,17 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="imageViewVice" destination="sxm-VG-lic" id="UhC-n3-Mv0"/>
+                                    <outlet property="imageViewWinner" destination="Nlb-Gy-ese" id="Kya-gH-H91"/>
+                                    <outlet property="labelCountry" destination="G9G-Q3-ah2" id="sbU-1l-EXo"/>
+                                    <outlet property="labelVice" destination="fGV-Yn-nM4" id="0Lr-Jz-irt"/>
+                                    <outlet property="labelViceScore" destination="Uw3-Nn-VI9" id="3j0-4m-JBi"/>
+                                    <outlet property="labelWinnerScore" destination="sa6-nd-LCv" id="r3U-8q-kKa"/>
+                                    <outlet property="labelWinnner" destination="HOB-2l-cAG" id="8fn-4h-siO"/>
+                                    <outlet property="labelYear" destination="1G8-qk-W7j" id="cAt-Jb-U3z"/>
+                                    <segue destination="tup-TU-49r" kind="show" id="kGg-9H-qzE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -172,6 +183,7 @@
                         <viewLayoutGuide key="safeArea" id="LOZ-91-xYI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="SSl-2H-jhD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zc8-mE-hOs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

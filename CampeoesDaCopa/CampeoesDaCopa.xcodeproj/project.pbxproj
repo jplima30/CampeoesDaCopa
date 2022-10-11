@@ -65,6 +65,7 @@
 		00C1947B28F60E69003C6B84 /* Bélgica.png in Resources */ = {isa = PBXBuildFile; fileRef = 00C1944A28F60E69003C6B84 /* Bélgica.png */; };
 		00C1947C28F60E69003C6B84 /* Bulgária.png in Resources */ = {isa = PBXBuildFile; fileRef = 00C1944B28F60E69003C6B84 /* Bulgária.png */; };
 		00C1947E28F60E75003C6B84 /* winners.json in Resources */ = {isa = PBXBuildFile; fileRef = 00C1947D28F60E75003C6B84 /* winners.json */; };
+		00C1948028F62AF3003C6B84 /* WorldCupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C1947F28F62AF3003C6B84 /* WorldCupTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +129,7 @@
 		00C1944A28F60E69003C6B84 /* Bélgica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bélgica.png"; path = "../../../../../../Downloads/Arquivos CampeoesDaCopa/Bandeiras/Bélgica.png"; sourceTree = "<group>"; };
 		00C1944B28F60E69003C6B84 /* Bulgária.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bulgária.png"; path = "../../../../../../Downloads/Arquivos CampeoesDaCopa/Bandeiras/Bulgária.png"; sourceTree = "<group>"; };
 		00C1947D28F60E75003C6B84 /* winners.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = winners.json; path = "../../../../../../Downloads/Arquivos CampeoesDaCopa/winners.json"; sourceTree = "<group>"; };
+		00C1947F28F62AF3003C6B84 /* WorldCupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			children = (
 				000F52D328F4636A00509E5A /* WinnersTableViewController.swift */,
 				000F52D628F464E300509E5A /* WorldCupViewController.swift */,
+				00C1947F28F62AF3003C6B84 /* WorldCupTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				000F52D428F4636A00509E5A /* WinnersTableViewController.swift in Sources */,
 				00B7067A28F3516800A0CFDA /* AppDelegate.swift in Sources */,
 				000F52D928F4657F00509E5A /* WorldCup.swift in Sources */,
+				00C1948028F62AF3003C6B84 /* WorldCupTableViewCell.swift in Sources */,
 				000F52D728F464E300509E5A /* WorldCupViewController.swift in Sources */,
 				00B7067C28F3516800A0CFDA /* SceneDelegate.swift in Sources */,
 			);
@@ -530,6 +534,7 @@
 				DEVELOPMENT_TEAM = YJ623CW64Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CampeoesDaCopa/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Campeões";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -558,6 +563,7 @@
 				DEVELOPMENT_TEAM = YJ623CW64Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CampeoesDaCopa/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Campeões";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

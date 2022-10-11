@@ -10,6 +10,12 @@ class WinnersTableViewController: UITableViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! WorldCupViewController
+        let worldCup = worldCups[tableView.indexPathForSelectedRow!.row]
+        vc.worldCup = worldCup
+    }
+    
     func loadWorldCups() {
         let fileURL = Bundle.main.url(forResource: "winners.json", withExtension: nil)!
         let jsonData = try! Data(contentsOf: fileURL)
@@ -35,11 +41,9 @@ class WinnersTableViewController: UITableViewController {
 
     // É um método que é chamado sempre que o método for apresentar uma célula (quando a célula está prestes a ser visível a tabela constroi ela)/ indexpath = contem o caminho do índice da célula ou seja em qual sessão a célula se encontra e qual linha ela faz parte
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WorldCupTableViewCell
         let worldCup = worldCups[indexPath.row]
-        cell.textLabel?.text = "Copa \(worldCup.year) - \(worldCup.country)"
-        cell.detailTextLabel?.text = "\(worldCup.winner) vs \(worldCup.vice))"
-        cell.imageView?.image = UIImage(named: "\(worldCup.winner).png")
+        cell.prepare(with: worldCup)
         return cell
     }
     
