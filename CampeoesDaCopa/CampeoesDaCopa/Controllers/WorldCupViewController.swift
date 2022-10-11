@@ -1,18 +1,13 @@
-//
-//  WorldCupViewController.swift
-//  CampeoesDaCopa
-//
-//  Created by jplima on 10/10/22.
-//
-
 import UIKit
 
 class WorldCupViewController: UIViewController {
 
+    var worldCup: WorldCup!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print("Ano da copa selecionado: \(worldCup.year)")
     }
     
 
