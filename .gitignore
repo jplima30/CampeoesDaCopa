@@ -1,0 +1,43 @@
+```
+# Build artifacts
+*.o
+*.obj
+*.a
+*.lib
+*.dylib
+*.so
+*.dll
+*.exe
+*.out
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+*.pbxuser
+*.mode1v3
+*.perspectivev3
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+build/
+DerivedData/
+
+# Swift
+*.swiftmodule
+*.swiftdoc
+*.swiftdeps
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Environment variables
+.env
+.env.local
+*.env.*
+
+# Dependencies
+Pods/
+Carthage/
+```
