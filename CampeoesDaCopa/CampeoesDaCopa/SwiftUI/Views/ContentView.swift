@@ -85,13 +85,17 @@ struct ContentView: View {
             VStack(spacing: 20) {
                 HStack {
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("Próxima Copa")
+                        Text("Copa 2026")
                             .font(.custom("Helvetica", size: 14))
                             .foregroundColor(.white.opacity(0.8))
                         
                         Text("2026")
                             .font(.custom("Helvetica-Bold", size: 48))
                             .foregroundColor(.white)
+                        
+                        Text("Espanha Campeã!")
+                            .font(.custom("Helvetica-Bold", size: 16))
+                            .foregroundColor(.yellow)
                         
                         Text("48 Seleções • 104 Jogos")
                             .font(.custom("Helvetica", size: 12))
@@ -125,11 +129,11 @@ struct ContentView: View {
                 // Progress bar to 2026
                 VStack(alignment: .leading, spacing: 8) {
                     HStack {
-                        Text("Contagem Regressiva")
+                        Text("Resultado Final")
                             .font(.custom("Helvetica", size: 12))
                             .foregroundColor(.white.opacity(0.8))
                         Spacer()
-                        Text("~550 dias")
+                        Text("Espanha 1-0 Argentina")
                             .font(.custom("Helvetica-Bold", size: 12))
                             .foregroundColor(.yellow)
                     }
@@ -148,7 +152,7 @@ struct ContentView: View {
                                         endPoint: .trailing
                                     )
                                 )
-                                .frame(width: geometry.size.width * 0.3, height: 8)
+                                .frame(width: geometry.size.width * 1.0, height: 8)
                         }
                     }
                     .frame(height: 8)
@@ -286,7 +290,7 @@ struct ChampionCard: View {
             "México": "🇲🇽",
             "Rússia": "🇷🇺",
             "Catar": "🇶🇦",
-            "Em Breve": "⭐"
+            "Espanha": "🇪🇸"
         ]
         
         return flagMap[country, default: "🌍"]

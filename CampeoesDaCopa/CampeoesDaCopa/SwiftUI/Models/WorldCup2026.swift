@@ -42,11 +42,38 @@ extension WorldCupEdition {
     static let copa2026 = WorldCupEdition(
         year: 2026,
         country: "EUA, México e Canadá",
-        winner: "Em Breve",
-        vice: "Em Breve",
-        winnerScore: "-",
-        viceScore: "-",
-        matches: []
+        winner: "Espanha",
+        vice: "Argentina",
+        winnerScore: "1",
+        viceScore: "0",
+        matches: [
+            Match(stage: "Final", games: [
+                Game(home: "Espanha", away: "Argentina", score: "1-0 (Prorrogação)")
+            ]),
+            Match(stage: "Disputa do 3º Lugar", games: [
+                Game(home: "França", away: "Inglaterra", score: "4-6")
+            ]),
+            Match(stage: "Semifinal", games: [
+                Game(home: "França", away: "Espanha", score: "0-2"),
+                Game(home: "Inglaterra", away: "Argentina", score: "1-2")
+            ]),
+            Match(stage: "Quartas de Final", games: [
+                Game(home: "França", away: "Marrocos", score: "2-0"),
+                Game(home: "Espanha", away: "Bélgica", score: "2-1"),
+                Game(home: "Noruega", away: "Inglaterra", score: "1-2 (Prorrogação)"),
+                Game(home: "Argentina", away: "Suíça", score: "3-1 (Prorrogação)")
+            ]),
+            Match(stage: "Oitavas de Final", games: [
+                Game(home: "Marrocos", away: "Canadá", score: "3-0"),
+                Game(home: "França", away: "Paraguai", score: "1-0"),
+                Game(home: "Noruega", away: "Brasil", score: "2-1"),
+                Game(home: "Inglaterra", away: "México", score: "3-2"),
+                Game(home: "Espanha", away: "Portugal", score: "1-0"),
+                Game(home: "Bélgica", away: "EUA", score: "4-1"),
+                Game(home: "Argentina", away: "Egito", score: "3-2"),
+                Game(home: "Suíça", away: "Colômbia", score: "0-0 (4-3 pen)")
+            ])
+        ]
     )
     
     static let sampleData: [WorldCupEdition] = [
