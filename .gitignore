@@ -4,8 +4,8 @@
 *.obj
 *.a
 *.lib
-*.dylib
 *.so
+*.dylib
 *.dll
 *.exe
 *.out
@@ -13,19 +13,14 @@
 # Xcode
 *.xcodeproj/
 *.xcworkspace/
-*.pbxuser
-*.mode1v3
-*.perspectivev3
 *.xcuserstate
-*.xccheckout
-*.moved-aside
-build/
+*.swiftpm/
+xcuserdata/
 DerivedData/
 
 # Swift
-*.swiftmodule
-*.swiftdoc
-*.swiftdeps
+.build/
+.swift-version
 
 # Temporary files
 *.tmp
@@ -37,7 +32,11 @@ DerivedData/
 .env.local
 *.env.*
 
-# Dependencies
-Pods/
-Carthage/
+# IDE
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
 ```
