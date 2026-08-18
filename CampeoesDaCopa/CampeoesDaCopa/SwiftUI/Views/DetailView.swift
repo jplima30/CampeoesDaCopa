@@ -153,7 +153,7 @@ struct DetailView: View {
                 }
                 
                 // Champion badge
-                if edition.winner != "Em Breve" {
+                if edition.year <= 2026 {
                     GlassCardView(intensity: 0.5, cornerRadius: 15) {
                         HStack(spacing: 8) {
                             Text("👑")
@@ -186,8 +186,9 @@ struct DetailView: View {
                 InfoRow(icon: "globe", label: "Sede", value: edition.country)
                 
                 if edition.year == 2026 {
-                    InfoRow(icon: "flag.checkered", label: "Status", value: "Em Preparação")
-                    InfoRow(icon: "number.circle", label: "Seleções", value: "48 (Confirmado)")
+                    InfoRow(icon: "flag.checkered", label: "Status", value: "Concluída")
+                    InfoRow(icon: "number.circle", label: "Seleções", value: "48")
+                    InfoRow(icon: "star.fill", label: "Campeão", value: "Espanha")
                 } else {
                     InfoRow(icon: "calendar", label: "Ano", value: "\(edition.year)")
                 }
@@ -229,15 +230,17 @@ struct DetailView: View {
     
     private var historicalText2026: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("A Copa do Mundo de 2026 será histórica!")
+            Text("A Espanha conquistou seu segundo título mundial em uma final emocionante contra a Argentina na prorrogação!")
                 .font(.custom("Helvetica", size: 14))
                 .foregroundColor(.white.opacity(0.8))
                 .fixedSize(horizontal: false, vertical: true)
             
+            BulletPoint(text: "Final: Espanha 1-0 Argentina (Prorrogação)")
+            BulletPoint(text: "3º Lugar: Inglaterra 6-4 França")
             BulletPoint(text: "Primeira Copa com 48 seleções")
             BulletPoint(text: "Realizada em 3 países: EUA, México e Canadá")
-            BulletPoint(text: "104 jogos no total")
-            BulletPoint(text: "16 cidades-sede na América do Norte")
+            BulletPoint(text: "Brasil eliminado nas oitavas pela Noruega (1-2)")
+            BulletPoint(text: "Semifinais: Espanha 2-0 França, Argentina 2-1 Inglaterra")
         }
     }
     
@@ -339,7 +342,7 @@ struct DetailView: View {
             "México": "🇲🇽",
             "Rússia": "🇷🇺",
             "Catar": "🇶🇦",
-            "Em Breve": "⭐"
+            "Espanha": "🇪🇸"
         ]
         
         return flagMap[country, default: "🌍"]
